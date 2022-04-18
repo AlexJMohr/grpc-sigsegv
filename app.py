@@ -32,6 +32,7 @@ def test():
         'client_id': CLIENT_ID,
         'client_secret': CLIENT_SECRET,
         'refresh_token': REFRESH_TOKEN,
+        'use_proto_plus': True,
     }
     if LOGIN_CUSTOMER_ID:
         credentials['login_customer_id'] = LOGIN_CUSTOMER_ID
