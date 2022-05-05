@@ -10,12 +10,12 @@ faulthandler.enable()
 from flask import Flask, render_template, jsonify, request
 from google.ads.googleads.client import GoogleAdsClient
 
-CUSTOMER_ID = ''
-LOGIN_CUSTOMER_ID = ''  # if using a client account under a manager account, the manager account id goes here
-DEVELOPER_TOKEN = ''
-CLIENT_ID = ''
-CLIENT_SECRET = ''
-REFRESH_TOKEN = ''
+CUSTOMER_ID = '9713819907'
+LOGIN_CUSTOMER_ID = '6123296949'  # if using a client account under a manager account, the manager account id goes here
+DEVELOPER_TOKEN = 'RzTH0-qWDgGAaFj2W-NhqA'
+CLIENT_ID = '626110127825.apps.googleusercontent.com'
+CLIENT_SECRET = 'a16w9mNY-7Qex1Ft6W05j3Nf'
+REFRESH_TOKEN = '1//06XJzNwLJUnXBCgYIARAAGAYSNwF-L9IrhPPaq4F8YANMIFyPLT408mFHGUzuIzkFgJNnJGeXDLTqrzZKEhmS_E9ENCghiGn5tjw'
 
 app = Flask(__name__)
 
