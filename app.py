@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
-import eventlet
+import os
+from gevent import monkey
 import faulthandler
 
-print('Monkey Patching Eventlet')
-eventlet.monkey_patch()
-print('Enable faulthandler')
-faulthandler.enable()
+if not os.environ.get('SERVER_SOFTWARE', '').startswith('gunicorn'):
+    print('Monkey patching manually')
+    monkey.patch_all()
+    print('Enable faulthandler')
+    faulthandler.enable()
+
+print('Is monkey patched?', monkey.is_anything_patched())
 
 from flask import Flask, render_template, jsonify, request
 from google.ads.googleads.client import GoogleAdsClient

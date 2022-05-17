@@ -21,10 +21,13 @@ GRPC_PYTHON_CFLAGS='-g' pip install -r requirements.txt
 
 ```bash
 ./app.py
+# or run with gunicorn:
+./run-with-gunicorn.sh
 ```
 
 Go to `https://localhost:5000/` in your browser.
-The flask server should crash with segmentation fault.
+The flask server should crash with assertion failed.
+If running with gunicorn, the worker will crash and restart.
 If not, try again but it is fairly likely.
 
 ## Example Output
